@@ -1,5 +1,5 @@
 import './index.css';
-import getData from './modules/fetch-data';
+import processData from './modules/fetch-data';
 import setInnerHtml from './modules/dom-functions';
 
 const
@@ -11,13 +11,16 @@ feelsLike = document.getElementById('feels-like'),
 wind = document.getElementById('wind'),
 humidity = document.getElementById('humidity');
 
-getData()
-    .then(response => {
-        setInnerHtml(locationName, response.name);
-        setInnerHtml(weatherDescription, response.weather[0].description);
-        setInnerHtml(weatherIcon, response.weather[0].icon);
-        setInnerHtml(temperature, response.main.temp);
-        setInnerHtml(feelsLike, response.main.feels_like);
-        setInnerHtml(wind, response.wind.speed);
-        setInnerHtml(humidity, response.main.humidity);
-    });
+processData()
+.then(response => {
+    setInnerHtml(locationName, response.name);
+    setInnerHtml(weatherDescription, response.description);
+    setInnerHtml(weatherIcon, response.icon);
+    setInnerHtml(temperature, response.temperature);
+    setInnerHtml(feelsLike, response.feel);
+    setInnerHtml(wind, response.wind);
+    setInnerHtml(humidity, response.humidity);
+})
+.catch(err => {
+    console.log(err)
+});
