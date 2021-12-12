@@ -1,6 +1,6 @@
 import './index.css';
 import processData from './modules/fetch-data';
-import setInnerHtml from './modules/dom-functions';
+import {setInnerHtml, setImgSrc} from './modules/dom-functions';
 
 const
 locationName = document.getElementById('location-name'),
@@ -15,7 +15,7 @@ processData()
 .then(response => {
     setInnerHtml(locationName, response.name);
     setInnerHtml(weatherDescription, response.description);
-    setInnerHtml(weatherIcon, response.icon);
+    setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@2x.png`);
     setInnerHtml(temperature, response.temperature);
     setInnerHtml(feelsLike, response.feel);
     setInnerHtml(wind, response.wind);
