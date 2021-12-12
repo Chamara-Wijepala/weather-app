@@ -16,10 +16,10 @@ processData()
     setInnerHtml(locationName, response.name);
     setInnerHtml(weatherDescription, response.description);
     setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@2x.png`);
-    setInnerHtml(temperature, response.temperature);
-    setInnerHtml(feelsLike, response.feel);
-    setInnerHtml(wind, response.wind);
-    setInnerHtml(humidity, response.humidity);
+    setInnerHtml(temperature, `${response.temperature} °C`);
+    setInnerHtml(feelsLike, `Feels Like ${response.feel} °C`);
+    setInnerHtml(wind, `Wind Speed ${response.wind} m/s`);
+    setInnerHtml(humidity, `Humidity ${response.humidity}%`);
 })
 .catch(err => {
     console.log(err)
