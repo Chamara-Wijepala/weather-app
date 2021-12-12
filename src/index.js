@@ -27,7 +27,7 @@ toggleUnits.addEventListener('change', () => {
 function renderPage() {
     processData(unit)
     .then(response => {
-        setInnerHtml(locationName, response.name);
+        setInnerHtml(locationName, `${response.name}, ${response.country}`);
         setInnerHtml(weatherDescription, response.description);
         setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@2x.png`);
         setInnerHtml(temperature, `${response.temperature} ${unitSymbol}`);
