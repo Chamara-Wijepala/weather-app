@@ -1,10 +1,10 @@
-async function getData(unit) {
-    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=montreal&units=${unit}&APPID=fe0d90bbf16db5ba4d69225da09c2c9c`);
+async function getData(location, unit) {
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=${unit}&APPID=fe0d90bbf16db5ba4d69225da09c2c9c`);
     return data.json()
 };
 
-export default async function processData(unit) {
-    const data = await getData(unit)
+export default async function processData(location, unit) {
+    const data = await getData(location, unit)
     const processedData = {
         name: data.name,
         country: data.sys.country,

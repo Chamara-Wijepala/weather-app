@@ -10,7 +10,9 @@ temperature = document.getElementById('temperature'),
 feelsLike = document.getElementById('feels-like'),
 wind = document.getElementById('wind'),
 humidity = document.getElementById('humidity'),
-toggleUnits = document.getElementById('toggle-units');
+toggleUnits = document.getElementById('toggle-units'),
+locationForm = document.getElementById('location-form'),
+locationInput = document.getElementById('location-input');
 
 let unit = 'metric';
 let unitSymbol = '°C';
@@ -24,8 +26,16 @@ toggleUnits.addEventListener('change', () => {
     renderPage();
 });
 
+let location = 'montreal';
+
+locationForm.addEventListener('submit', e => {
+    e.preventDefault();
+    location = locationInput.value;
+    renderPage();
+});
+
 function renderPage() {
-    processData(unit)
+    processData(location, unit)
     .then(response => {
         setInnerHtml(locationName, `${response.name}, ${response.country}`);
         setInnerHtml(weatherDescription, response.description);
