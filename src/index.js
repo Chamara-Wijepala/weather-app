@@ -12,7 +12,8 @@ wind = document.getElementById('wind'),
 humidity = document.getElementById('humidity'),
 toggleUnits = document.getElementById('toggle-units'),
 locationForm = document.getElementById('location-form'),
-locationInput = document.getElementById('location-input');
+locationInput = document.getElementById('location-input'),
+errorMessage = document.getElementById('error-message');
 
 let unit = 'metric';
 let unitSymbol = '°C';
@@ -31,6 +32,7 @@ let location = 'montreal';
 locationForm.addEventListener('submit', e => {
     e.preventDefault();
     location = locationInput.value;
+    errorMessage.style.display = 'none';
     renderPage();
 });
 
@@ -46,7 +48,7 @@ function renderPage() {
         setInnerHtml(humidity, `Humidity ${response.humidity}%`);
     })
     .catch(err => {
-        console.log(err)
+        errorMessage.style.display = 'block';
     });
 };
 
