@@ -10,6 +10,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: 60px auto;
+    background: linear-gradient(0deg, #006E5F, #180063);
 }
 
 #error-message {
@@ -19,7 +20,6 @@
 }
 
 #search-location {
-    background-color: cornflowerblue;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -54,12 +54,12 @@
 }
 
 main {
-    background-color: lightslategray;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
     cursor: default;
+    color: white;
 }
 
 #weather-details {
@@ -78,7 +78,7 @@ main {
 #temperature {
     font-size: 6em;
     grid-area: temp;
-    border-right: 1px solid black;
+    border-right: 1px solid white;
     text-align: right;
     padding-right: 25px;
     white-space: nowrap;
@@ -87,7 +87,7 @@ main {
 #details-grid {
     text-align: left;
     grid-area: details;
-    border-left: 1px solid black;
+    border-left: 1px solid white;
     padding-left: 25px;
     display: flex;
     flex-direction: column;
@@ -104,7 +104,6 @@ main {
 }
 
 .flex-items {
-    border: 1px solid black;
     flex-grow: 1;
     text-align: center;
 }
