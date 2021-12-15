@@ -33,6 +33,26 @@
     width: 200px;
 }
 
+#checkbox-label {
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#toggle-units {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
 main {
     background-color: lightslategray;
     display: flex;

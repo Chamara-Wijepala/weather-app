@@ -13,7 +13,8 @@ humidity = document.getElementById('humidity'),
 toggleUnits = document.getElementById('toggle-units'),
 locationForm = document.getElementById('location-form'),
 locationInput = document.getElementById('location-input'),
-errorMessage = document.getElementById('error-message');
+errorMessage = document.getElementById('error-message'),
+checkboxSpan = document.getElementById('checkbox-span');
 
 let unit = 'metric';
 let unitSymbol = '°C';
@@ -39,6 +40,7 @@ locationForm.addEventListener('submit', e => {
 function renderPage() {
     processData(location, unit)
     .then(response => {
+        setInnerHtml(checkboxSpan, unitSymbol);
         setInnerHtml(locationName, `${response.name}, ${response.country}`);
         setInnerHtml(weatherDescription, response.description);
         setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@4x.png`);
