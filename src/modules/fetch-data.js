@@ -12,8 +12,8 @@ export default async function processData(location, unit) {
         country: data.sys.country,
         description: data.weather[0].description,
         icon: data.weather[0].icon,
-        temperature: data.main.temp,
-        feel: data.main.feels_like,
+        temperature: Math.round(data.main.temp),
+        feel: Math.round(data.main.feels_like),
         wind: data.wind.speed,
         humidity: data.main.humidity,
     };
