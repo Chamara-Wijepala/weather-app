@@ -41,7 +41,7 @@ function renderPage() {
     .then(response => {
         setInnerHtml(locationName, `${response.name}, ${response.country}`);
         setInnerHtml(weatherDescription, response.description);
-        setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@2x.png`);
+        setImgSrc(weatherIcon, `https://openweathermap.org/img/wn/${response.icon}@4x.png`);
         setInnerHtml(temperature, `${response.temperature} ${unitSymbol}`);
         setInnerHtml(feelsLike, `Feels Like ${response.feel} ${unitSymbol}`);
         setInnerHtml(wind, `Wind Speed ${response.wind} ${windSpeed}`);

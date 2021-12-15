@@ -6,3 +6,40 @@
 #error-message {
     display: none;
 }
+
+#search-location {
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+
+#location-input {
+    padding: 10px;
+    border: none;
+    border-radius: 2%;
+    outline: none;
+    width: 200px;
+}
+
+#content {
+    background-color: lightslategray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+#weather-details {
+    margin: 10px;
+    min-width: 300px;
+    max-width: auto;
+}
+
+#weather-info {
+    margin: 10px;
+}
+
+.flex-items {
+    border: 1px solid black;
+    flex-grow: 1;
+    text-align: center;
+}

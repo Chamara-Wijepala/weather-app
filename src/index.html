@@ -7,25 +7,27 @@
     <title>Weather App</title>
 </head>
 <body>
-    <main>
-        <div id="search-location">
-            <form id="location-form">
-                <input type="text" placeholder="Search Location..." name="location-input" id="location-input">
-            </form>
-            <div id="error-message">Invalid Location</div>
-        </div>
-        <div id="content">
+    <div id="search-location">
+        <form id="location-form">
+            <input type="text" placeholder="Search Location..." name="location-input" id="location-input">
+        </form>
+        <div id="error-message">Invalid Location</div>
+    </div>
+    <div id="content">
+        <div class="flex-items" id="weather-details">
             <label>
                 <input type="checkbox" id="toggle-units">
             </label>
             <div id="location-name"></div>
-            <div id="weather-description"></div>
-            <img id="weather-icon"></img>
             <div id="temperature"></div>
             <div id="feels-like"></div>
             <div id="wind"></div>
             <div id="humidity"></div>
         </div>
-    </main>
+        <div class="flex-items" id="weather-info">
+            <img id="weather-icon"></img>
+            <div id="weather-description"></div>
+        </div>
+    </div>
 </body>
 </html>
