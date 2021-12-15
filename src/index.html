@@ -13,16 +13,15 @@
                 <input type="text" placeholder="Search Location..." name="location-input" id="location-input">
             </form>
             <div id="error-message">Invalid Location!</div>
+            <label>
+                <input type="checkbox" id="toggle-units">
+                <span id="custom-toggle-units"></span>
+            </label>
         </header>
         <main>
             <div class="flex-items" id="weather-details">
                 <div id="location-name"></div>
-                <div id="temperature-grid">
-                    <label>
-                        <input type="checkbox" id="toggle-units">
-                    </label>
-                    <div id="temperature"></div>
-                </div>
+                <div id="temperature"></div>
                 <div id="details-grid">
                     <div id="feels-like"></div>
                     <div id="wind"></div>

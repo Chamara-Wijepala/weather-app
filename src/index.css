@@ -54,15 +54,12 @@ main {
     grid-area: location;
 }
 
-#temperature-grid {
-    grid-area: temp;
-    text-align: right;
-    padding-right: 25px;
-    border-right: 1px solid black;
-}
-
 #temperature {
     font-size: 6em;
+    grid-area: temp;
+    border-right: 1px solid black;
+    text-align: right;
+    padding-right: 25px;
 }
 
 #details-grid {
