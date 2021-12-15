@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#content {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px auto;
+    background: linear-gradient(0deg, #006E5F, #180063);
+}
+
+#error-message {
+    display: none;
+    margin: 5px;
+    color: red;
+}
+
+#search-location {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#location-input {
+    padding: 10px;
+    border: none;
+    border-radius: 2%;
+    outline: none;
+    width: 200px;
+}
+
+#checkbox-label {
+    background-color: white;
+    position: absolute;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#toggle-units {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    cursor: default;
+    color: white;
+}
+
+#weather-details {
+    margin: 10px;
+    display: grid;
+    grid-template-areas: 
+        'location location'
+        'temp details';
+}
+
+#location-name {
+    font-size: 3em;
+    grid-area: location;
+}
+
+#temperature {
+    font-size: 6em;
+    grid-area: temp;
+    border-right: 1px solid white;
+    text-align: right;
+    padding-right: 25px;
+    white-space: nowrap;
+}
+
+#details-grid {
+    text-align: left;
+    grid-area: details;
+    border-left: 1px solid white;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#weather-info {
+    margin: 10px;
+}
+
+#weather-description {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+.flex-items {
+    flex-grow: 1;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #location-name {
+        font-size: 10vw;
+    }
+
+    #temperature {
+        font-size: 10vw;
+    }
+}
+
+/*# sourceMappingURL=main..css.map*/
